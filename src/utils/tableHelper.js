@@ -29,5 +29,5 @@ function getSorting(order, orderBy) {
 }
 
 export {
-    counter, createData, desc, stableSort, getSorting
+    createData, desc, stableSort, getSorting
 };
