@@ -1,6 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Form, Field } from 'react-final-form';
+
 import { TextField } from 'final-form-material-ui';
+
 import {
     Paper,
     Grid,
@@ -26,11 +29,10 @@ const validate = values => {
 };
 
 class AddUser extends React.Component {
-    onSubmit = ({ firstName, lastName, phone, age,}, { reset, ...props1 }, ...props2) => {
-        // const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-        // window.alert(JSON.stringify(values, 0, 2));
-        console.log( props1, props2);
-        // reset();
+    onSubmit = ({ firstName, lastName, phone, age }, { reset }) => {
+        const { createUser } = this.props;
+        createUser({ firstName, lastName, phone, age}); 
+        reset();
     };
 
     render() {
@@ -117,3 +119,8 @@ class AddUser extends React.Component {
 }
 
 export default AddUser;
+
+
+AddUser.propTypes = {
+    createUser: PropTypes.func.isRequired
+};

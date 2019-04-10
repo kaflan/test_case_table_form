@@ -27,7 +27,13 @@ function stableSort(array, cmp) {
 function getSorting(order, orderBy) {
     return order === 'desc' ? (a, b) => desc(a, b, orderBy) : (a, b) => -desc(a, b, orderBy);
 }
+const rows = [
+    { id: 'firstName', numeric: false, disablePadding: true, label: 'First Name' },
+    { id: 'lastName', numeric: true, disablePadding: false, label: 'Last Name' },
+    { id: 'phone', numeric: true, disablePadding: false, label: 'Phone' },
+    { id: 'age', numeric: true, disablePadding: false, label: 'Age' },
+];
 
 export {
-    createData, desc, stableSort, getSorting
+    createData, desc, stableSort, getSorting, rows
 };

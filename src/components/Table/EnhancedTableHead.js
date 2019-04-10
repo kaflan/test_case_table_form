@@ -1,5 +1,5 @@
 import React from "react";
-import {Checkbox, TableCell, TableHead, TableRow, TableSortLabel, Tooltip} from "@material-ui/core";
+import { Checkbox, TableCell, TableHead, TableRow, TableSortLabel, Tooltip } from "@material-ui/core";
 import PropTypes from "prop-types";
 
 class EnhancedTableHead extends React.Component {
